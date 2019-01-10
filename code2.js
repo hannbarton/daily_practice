@@ -15,25 +15,26 @@ const otherMult = (arr) => {
     return multArr;
 }
 
-console.log(otherMult([1, 2, 3, 4, 5]))
-
 const multNoDiv = (arr) => {
-    let multArr = []
-
-
+    let multArr = new Array(arr.length)
     let post = 1
+    let pre = 1;
 
     // before
-    let pre = 1;
-    let preArr = []
     for (let i = 0; i < arr.length; i++) {
-        arr[i] = pre
+        multArr[i] = pre
         pre *= arr[i]
+        console.log(multArr)
     }
-
     // after
-    for (let i = 0; i < arr.length; i++) {
-
+    for (let i = arr.length - 1; i >= 0; i--) {
+        multArr[i] *= post
+        post *= arr[i]
+        console.log('post', multArr)
     }
-
+    return multArr
 }
+
+console.log(multNoDiv([1, 2, 3, 4, 5]))
+//[ 1, 1, 2, 6, 24 ] first pass
+// [1 (* 120), 1 (* 60), 2 (* 20), 6 (* 4), 24]
