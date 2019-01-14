@@ -38,3 +38,10 @@ const multNoDiv = (arr) => {
 console.log(multNoDiv([1, 2, 3, 4, 5]))
 //[ 1, 1, 2, 6, 24 ] first pass
 // [1 (* 120), 1 (* 60), 2 (* 20), 6 (* 4), 24]
+
+
+const replace = (str) => {
+    return str.slice(1).replace(/([a-z])([A-Z])/g, '$1 $2')
+}
+
+console.log(replace('#ThisIsTheSolution'))
