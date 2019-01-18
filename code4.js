@@ -26,10 +26,6 @@ const missing = (arr) => {
     return 'hello world'
 }
 
-const swap = () => {
-
-}
-
 // [3, 4, -1, 1]
 // [3, 4, -1, 1]
 //  0  1   2  3
