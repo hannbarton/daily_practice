@@ -56,12 +56,12 @@ class Unival {
 
 // NODE.counter()
 
-Unival.prototype.counter() {
-   if (this.left === null && this.right === null) {
-     count++;
-   }
-   //this.left.left
-}
+// Unival.prototype.counter() {
+//    if (this.left === null && this.right === null) {
+//      count++;
+//    }
+//    //this.left.left
+// }
 
 function counter(tree, currentValue = null, count= 0) {
   if (tree.left === null && tree.right === null) {
